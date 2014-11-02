@@ -1,0 +1,22 @@
+{
+  "name": "peoplefinder",
+  "version": "1.0.0",
+  "description": "A simple people registry that listens for quick connect event and tracks people data in the connected room",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DamonOehlman/peoplefinder.git"
+  },
+  "author": "Damon Oehlman <damon.oehlman@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DamonOehlman/peoplefinder/issues"
+  },
+  "homepage": "https://github.com/DamonOehlman/peoplefinder",
+  "dependencies": {
+    "observable": "~2.1.3"
+  }
+}
