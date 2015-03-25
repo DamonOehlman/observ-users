@@ -2,6 +2,23 @@ var Observ = require('observ');
 var ObserVarHash = require('observ-varhash');
 var EVENTS = ['peer:announce', 'peer:update', 'local:announce'];
 
+/**
+  # observ-users
+
+  This is a simple observable data structure (an
+  [`observ-varhash`](https://github.com/nrw/observ-varhash)) that can be used
+  to report on the names of the participants connected to a room when working
+  with [`rtc-quickconnect`](https://github.com/rtc-io/rtc-quickconnect).
+
+  It does  require that people provide a `uid` and `name` attribute as part of
+  their quickconnect profile information, and once they have they will be
+  reported as part of this list.
+
+  ## Example Usage
+
+  <<< examples/simple.js
+
+**/
 module.exports = function(conference, opts) {
   var users = ObservVarHash({});
 
