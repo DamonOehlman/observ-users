@@ -1,22 +1,23 @@
-var o = require('observable');
+var Observ = require('observ');
+var ObserVarHash = require('observ-varhash');
 var EVENTS = ['peer:announce', 'peer:update', 'local:announce'];
 
 module.exports = function(conference, opts) {
-  var knownUsers = {};
+  var users = ObservVarHash({});
 
   function updateProfile(data) {
-    var updateName = knownUsers[data.uid];
-
-    if (! data.uid) {
+    var user;
+    if ((! data.uid) || (data.name === undefined)) {
       return;
     }
 
-    console.log('updating profile: ' + data.uid, knownUsers);
-    if (typeof updateName == 'function') {
-      return updateName(data.name);
+    // get the user for the specified uid
+    user = users.get(data.uid);
+    if (user && typeof user.set == 'function') {
+      return user.set(data.name);
     }
 
-    knownUsers[data.uid] = o(data.name);
+    users.set(data.uid, data.name);
   }
 
   // handle profile updates and announces
@@ -24,7 +25,5 @@ module.exports = function(conference, opts) {
     conference.on(eventName, updateProfile);
   });
 
-  return function(uid) {
-    return knownUsers[uid] || (knownUsers[uid] = o());
-  };
+  return users;
 };
