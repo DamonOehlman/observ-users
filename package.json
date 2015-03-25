@@ -4,7 +4,8 @@
   "description": "A simple people registry that listens for quick connect event and tracks people data in the connected room",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gendocs": "gendocs > README.md"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,11 @@
   },
   "homepage": "https://github.com/DamonOehlman/peoplefinder",
   "dependencies": {
-    "observable": "~2.1.3"
+    "observ": "^0.2.0",
+    "observ-varhash": "^1.0.5"
+  },
+  "devDependencies": {
+    "rtc-quickconnect": "^4.2.0",
+    "tape": "^3.5.0"
   }
 }
