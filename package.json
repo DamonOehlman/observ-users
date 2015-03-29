@@ -1,7 +1,7 @@
 {
-  "name": "peoplefinder",
+  "name": "observ-users",
   "version": "1.0.0",
-  "description": "A simple people registry that listens for quick connect event and tracks people data in the connected room",
+  "description": "A simple user registry that listens for rtc-quickconnect event and tracks user data in the connected room",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,20 +9,26 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/DamonOehlman/peoplefinder.git"
+    "url": "https://github.com/DamonOehlman/observ-users.git"
   },
   "author": "Damon Oehlman <damon.oehlman@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DamonOehlman/peoplefinder/issues"
+    "url": "https://github.com/DamonOehlman/observ-users/issues"
   },
-  "homepage": "https://github.com/DamonOehlman/peoplefinder",
+  "homepage": "https://github.com/DamonOehlman/observ-users",
   "dependencies": {
     "observ": "^0.2.0",
     "observ-varhash": "^1.0.5"
   },
   "devDependencies": {
-    "rtc-quickconnect": "^4.2.0",
-    "tape": "^3.5.0"
+    "broth": "^1.2.1",
+    "browserify": "^9.0.3",
+    "cuid": "^1.2.4",
+    "quickconnect-matrix": "^1.0.1",
+    "rtc-switchboard": "^2.2.1",
+    "tap-spec": "^2.2.2",
+    "tape": "^3.5.0",
+    "travis-multirunner": "^2.0.9"
   }
 }
