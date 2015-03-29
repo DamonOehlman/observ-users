@@ -34,7 +34,7 @@ module.exports = function(conference, opts) {
       return user.set(data.name);
     }
 
-    users.set(data.uid, data.name);
+    users.put(data.uid, data.name);
   }
 
   // handle profile updates and announces
