@@ -1,5 +1,5 @@
 var Observ = require('observ');
-var ObserVarHash = require('observ-varhash');
+var ObservVarHash = require('observ-varhash');
 var EVENTS = ['peer:announce', 'peer:update', 'local:announce'];
 
 /**
