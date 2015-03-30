@@ -4,7 +4,7 @@
   "description": "A simple user registry that listens for rtc-quickconnect event and tracks user data in the connected room",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "browserify test/all.js | broth start-$BROWSER | tap-spec",
     "gendocs": "gendocs > README.md"
   },
   "repository": {
@@ -29,6 +29,6 @@
     "rtc-switchboard": "^2.2.1",
     "tap-spec": "^2.2.2",
     "tape": "^3.5.0",
-    "travis-multirunner": "^2.0.9"
+    "travis-multirunner": "^2.1.0"
   }
 }
