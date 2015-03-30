@@ -26,6 +26,8 @@
     "browserify": "^9.0.3",
     "cuid": "^1.2.4",
     "quickconnect-matrix": "^1.0.1",
+    "random-name": "^0.1.0",
+    "rtc-quickconnect": "^4.2.1",
     "rtc-switchboard": "^2.2.1",
     "tap-spec": "^2.2.2",
     "tape": "^3.5.0",

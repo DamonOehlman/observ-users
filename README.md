@@ -10,13 +10,29 @@ their quickconnect profile information, and once they have they will be
 reported as part of this list.
 
 
-[![NPM](https://nodei.co/npm/peoplefinder.png)](https://nodei.co/npm/peoplefinder/)
+[![NPM](https://nodei.co/npm/observ-users.png)](https://nodei.co/npm/observ-users/)
 
-[![bitHound Score](https://www.bithound.io/github/DamonOehlman/peoplefinder/badges/score.svg)](https://www.bithound.io/github/DamonOehlman/peoplefinder) 
+[![Build Status](https://img.shields.io/travis/DamonOehlman/observ-users.svg?branch=master)](https://travis-ci.org/DamonOehlman/observ-users) [![bitHound Score](https://www.bithound.io/github/DamonOehlman/observ-users/badges/score.svg)](https://www.bithound.io/github/DamonOehlman/observ-users) 
 
 ## Example Usage
 
-ERROR: could not find: 
+```js
+var cuid = require('cuid');
+var ObservUsers = require('observ-users');
+var quickconnect = require('rtc-quickconnect');
+var randomName = require('random-name');
+
+var qc = quickconnect('https://switchboard.rtc.io/', { room: 'userhash-test' });
+var users = ObservUsers(qc);
+
+// report changes in the structure
+users(function(data) {
+  console.log('user registry changed: ', data);
+});
+
+qc.profile({ uid: cuid(), name: randomName() });
+
+```
 
 ## License(s)
 
