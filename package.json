@@ -1,7 +1,7 @@
 {
   "name": "observ-users",
   "version": "1.0.0",
-  "description": "A simple user registry that listens for rtc-quickconnect event and tracks user data in the connected room",
+  "description": "A simple user registry that listens for rtc-quickconnect events and tracks user data in the connected room",
   "main": "index.js",
   "scripts": {
     "test": "browserify test/all.js | broth start-$BROWSER | tap-spec",
